@@ -1,1 +1,75 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            display: table;
+            margin: 0 auto;
+            text-align: left;
+            border-collapse: collapse;
+        }
+        label {
+            display: table-row;
+            margin-bottom: 10px;
+        }
+        label > * {
+            display: table-cell;
+            padding: 5px 10px;
+        }
+        input[type="text"] {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            display: block;
+            margin: 20px auto 0;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0069d9;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Agregar Estudiante</h1>
+
+    <form action="/addPerson" method="POST">
+
+        
+        <label for="nss">NSS:</label>
+        
+        <input type="text" id="nss" name="nss"><br><br>
+        
+        <label for="name">Nombre:</label>
+        
+        <input type="text" id="nombre" name="nombre"><br><br>
+        
+        <label for="edad">Edad:</label>
+        
+        <input type="text" id="edad" name="edad"><br><br>
+        
+        <label for="tipoSangre">Tipo de sangre:</label>
+        
+        <input type="text" id="tipoSangre" name="tipoSangre"><br><br>
+
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

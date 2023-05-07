@@ -1,1 +1,81 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href=/assets/style.css type=text/css rel=stylesheet />
+    <title>Usuarios</title>
+    <style>
+        #titulo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #main-container {
+            margin: 0 auto;
+            width: 80%;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #51dfdf;
+            color: white;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        #agregarUsuario {
+            text-align: right;
+            margin-top: 20px;
+        }
+        #agregarUsuario a {
+            background-color: #51dfdf;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        #agregarUsuario a:hover {
+            background-color: #51dfdf;
+        }
+    </style>
+</head>
+<body>
+    <div id="titulo">
+        <p>Cátalogo de usuarios</p>
+    </div>
+    <div id="main-container">
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Tipo de Sangre</th>
+                <th>NSS</th>
+                <th></th>
+                <th></th>
+            </tr>
+            <% Persons.forEach(person => { %>
+                <tr>
+                    <td><%= person.nombre%></td>
+                    <td style="text-align: center"><%= person.edad%></td>
+                    <td style="text-align: center"><%= person.tipoSangre%></td>
+                    <td style="text-align: center"><%= person.nss%></td>
+                    <td><a href="URL">Actualizar</a></td>
+                    <td><a href="URL">Eliminar</a></td>
+                </tr>
+        <%});%>
+        </table>
+    </div>
+    <div id="agregarUsuario">
+        <a href="addPerson">Agregar</a> 
+    </div>
+    
+</body>
+</html>
